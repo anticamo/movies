@@ -2203,22 +2203,22 @@
             light: "Light"
         }
           , c = {
-            "vidsrc.to": {
-                name: "vidsrc.to",
+            "vidsrc.icu": {
+                name: "vidsrc.icu",
+                movieUrl: function({id: e}) {
+                    return `https://vidsrc.icu/embed/movie/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://vidsrc.icu/embed/tv/${e}/${t}/${n}`
+                }
+            },
+            "autoembed.cc": {
+                name: "autoembed.cc",
                 movieUrl: function({id: e}) {
                     return `https://player.autoembed.cc/embed/movie/${e}`
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://player.autoembad.cc/embed/tv/${e}/${t}/${n}`
-                }
-            },
-            "vidsrc.me": {
-                name: "vidsrc.me",
-                movieUrl: function({id: e}) {
-                    return `https://vidsrc.icu/embed/movie?tmdb=${e}`
-                },
-                showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://vidsrc.icu/embed/tv?tmdb=${e}&season=${t}&episode=${n}`
+                    return `https://player.autoembed.cc/embed/tv/${e}/${t}/${n}`
                 }
             },
             "autoembed.co": {
