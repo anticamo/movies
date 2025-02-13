@@ -2201,6 +2201,15 @@
             light: "Light"
         }
           , c = {
+            "Flicky": {
+                name: "Flicky",
+                movieUrl: function({imdbId: e}) {
+                    return `https://flicky.host/embed/movie/?id=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://flicky.host/embed/tv/?id=${e}-${t}-${n}`
+                }
+            },
             "vidsrc.dev": {
                 name: "vidsrc.dev",
                 movieUrl: function({id: e}) {
@@ -2226,15 +2235,6 @@
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
                     return `https://play2.123embed.net/tv/${e}/${t}/${n}`
-                }
-            },
-            "Flicky": {
-                name: "Flicky",
-                movieUrl: function({imdbId: e}) {
-                    return `https://flicky.host/embed/movie/?id=${e}`
-                },
-                showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://flicky.host/embed/tv/?id=${e}-${t}-${n}`
                 }
             },
             "multiembed.mov": {
@@ -2353,6 +2353,15 @@
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
                     return `https://2embed.org/embed/tv/${e}/${t}/${n}`
+                }
+            },
+            "vidlink": {
+                name: "VidLink",
+                movieUrl: function({id: e}) {
+                    return `https://vidlink.pro/movie/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://2embed.org/tv/${e}/${t}/${n}`
                 }
             },
         }
