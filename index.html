@@ -2066,12 +2066,12 @@
     (()=>{
         "use strict";
         const e = {
-            author: "XERFLIX",
-            name: "XERFLIX",
+            author: "GOONFLIX",
+            name: "GOONFLIX",
             header: {
                 name: {
                     normal: {
-                        text: "XER",
+                        text: "GOON",
                         accent: "FLIX"
                     },
                     mobile: {
@@ -2100,7 +2100,7 @@
                     label: "YouTube"
                 }, {
                     icon: "link",
-                    url: "https://www.facebook.com/100070538766234",
+                    url: "https://www.facebook.com/",
                     label: "link"
                 }]
             },
@@ -2201,6 +2201,15 @@
             light: "Light"
         }
           , c = {
+            "vidsrc.dev": {
+                name: "vidsrc.dev",
+                movieUrl: function({id: e}) {
+                    return `https://vidsrc.dev/embed/movie/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://vidsrc.dev/embed/tv/${e}/${t}/${n}`
+                }
+            },
             "vidsrc.icu": {
                 name: "vidsrc.icu",
                 movieUrl: function({id: e}) {
@@ -2210,8 +2219,8 @@
                     return `https://vidsrc.icu/embed/tv/${e}/${t}/${n}`
                 }
             },
-            "No Ads 1": {
-                name: "No Ads 1",
+            "123embed": {
+                name: "123embed",
                 movieUrl: function({id: e}) {
                     return `https://play2.123embed.net/movie/${e}`
                 },
@@ -2219,8 +2228,8 @@
                     return `https://play2.123embed.net/tv/${e}/${t}/${n}`
                 }
             },
-            "no ads 2": {
-                name: "No Ads 2",
+            "Flicky": {
+                name: "Flicky",
                 movieUrl: function({imdbId: e}) {
                     return `https://flicky.host/embed/movie/?id=${e}`
                 },
