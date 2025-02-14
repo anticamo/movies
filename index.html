@@ -2204,10 +2204,28 @@
             "Flicky": {
                 name: "Flicky",
                 movieUrl: function({imdbId: e}) {
-                    return `https://flicky.host/embed/movie/?id=${e}`
+                    return `https://flicky.host/embed/movie/${e}`
                 },
                 showUrl: function({id: e, season: t, episode: n}) {
-                    return `https://flicky.host/embed/tv/?id=${e}-${t}-${n}`
+                    return `https://flicky.host/embed/tv/${e}-${t}-${n}`
+                }
+            },
+              "vidsrc.net": {
+                name: "vidsrc.net",
+                movieUrl: function({imdbId: e}) {
+                    return `https://vidsrc.net/embed/movie/${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://vidsrc.net/embed/tv/${e}/${t}-${n}`
+                }
+            },
+              "vidsrc.net backup": {
+                name: "vidsrc.net backup",
+                movieUrl: function({imdbId: e}) {
+                    return `https://vidsrc.net/embed/movie/?imdb=${e}`
+                },
+                showUrl: function({id: e, season: t, episode: n}) {
+                    return `https://vidsrc.net/embed/tv/?imdb=${e}&season=${t}&episode=${n}`
                 }
             },
             "vidsrc.dev": {
@@ -3417,7 +3435,7 @@
             A.className = "title",
             P.className = "icon icon-tv",
             D.className = "text",
-            D.innerText = "Providers \n (In Case Of Error Select Other Server 👇)",
+            D.innerText = "Providers \n (In Case Of Error Select Other Server 👇) (May Include Ads)",
             R.className = "control",
             H.className = "button secondary icon-only",
             W.className = "icon icon-sync",
